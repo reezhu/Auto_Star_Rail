@@ -4,8 +4,6 @@
 
 [简体中文](README.md) | [文档](https://sra.stysqy.top)
 
-<img alt="LOGO" src="../../blob/map/picture/love!.png" style="border-radius:50%">
-
 <h1 align="center">
 
 Auto_Star_Rail
