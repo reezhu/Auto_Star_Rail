@@ -24,7 +24,7 @@ from .config import sra_config_obj, CONFIG_FILE_NAME, get_file, _
 from .exceptions import Exception
 from .log import log
 from .cv_tools import CV_Tools, show_img
-from .get_angle import Point
+#from .get_angle import Point
 
 class calculated(CV_Tools):
 
@@ -43,7 +43,7 @@ class calculated(CV_Tools):
         self.DEBUG = sra_config_obj.debug
         self.mouse = MouseController()
         self.keyboard = KeyboardController()
-        self.point = Point(title)
+        #self.point = Point(title)
 
         self.pos = (100, 100)
 
