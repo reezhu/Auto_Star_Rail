@@ -52,7 +52,7 @@ class calculated(CV_Tools):
                 dir = sys._MEIPASS
             else:
                 dir = Path()
-            self.ocr = CnOcr(det_model_name=det_model_name, rec_model_name=rec_model_name,det_root=os.path.join(dir, "model/cnocr"), rec_root=os.path.join(dir, "model/cnstd")) if not number else CnOcr(det_model_name=det_model_name, rec_model_name=rec_model_name,det_root="./model/cnocr", rec_root="./model/cnstd", cand_alphabet='0123456789')
+            self.ocr = CnOcr(det_model_name=det_model_name, rec_model_name=rec_model_name,det_root=os.path.join(dir, "model/cnstd"), rec_root=os.path.join(dir, "model/cnocr")) if not number else CnOcr(det_model_name=det_model_name, rec_model_name=rec_model_name,det_root="./model/cnstd", rec_root="./model/cnocr", cand_alphabet='0123456789')
             #self.ocr = CnOcr(det_model_name='db_resnet34', rec_model_name='densenet_lite_114-fc')
         self.check_list = lambda x,y: re.match(x, str(y)) != None
         self.compare_lists = lambda a, b: all(x <= y for x, y in zip(a, b))
@@ -282,7 +282,7 @@ class calculated(CV_Tools):
             "map_2-7": _("机械聚落"),
             #"orientation_4": (79, 80), # _("仙舟「罗浮")
             "map_3-1": _("流云渡"),
-            "map_3-2": _("迥星港"),
+            "map_3-2": _("迴星港"),
             "map_3-3": _("太卜司"),
             "map_3-4": _("工造司"),
             "map_3-5": _("丹鼎司"),
