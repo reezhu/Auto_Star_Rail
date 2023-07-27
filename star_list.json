@@ -5,11 +5,7 @@
   },
   {
     "path": "Honkai_Star_Rail.py",
-    "hash": "fcb90503847871c32f3458d0097a995a"
-  },
-  {
-    "path": "README_EN.md",
-    "hash": "86793ffe1c415f308624e02b9924a4f8"
+    "hash": "2e4cb47301adc89c5a6410737bbdbe4c"
   },
   {
     "path": "map_res_list.py",
@@ -17,47 +13,43 @@
   },
   {
     "path": "gui.py",
-    "hash": "40ff0b633f5f7f902d38290ce750ee3c"
+    "hash": "e9ff49958bca0a622572e1c6286db267"
   },
   {
     "path": "get_width.py",
     "hash": "883cd3ffb3c1f7a0e8fff08ba61269b3"
   },
   {
-    "path": "README_CHT.md",
-    "hash": "f26e29d09b17110ad6f79d5c40224d57"
-  },
-  {
     "path": "README.md",
-    "hash": "868a185cfef9da32b507636ffa5b2898"
+    "hash": "b4515a6107f4de40b32f1e867fee14df"
   },
   {
     "path": "model/label_cn.txt",
     "hash": "e3f7c9400f4379e05cadbbc8a43dda45"
   },
   {
-    "path": "model/cnocr/1.2/ppocr/ch_PP-OCRv3_det_infer.onnx",
-    "hash": "5732f8c84bd4cc0dab35094e7260f080"
-  },
-  {
-    "path": "model/cnocr/1.2/ppocr/en_PP-OCRv3_det_infer.onnx",
-    "hash": "72708a3ac241e25fefbc606832dc7529"
-  },
-  {
-    "path": "model/cnstd/2.2/ppocr/en_PP-OCRv3_rec_infer.onnx",
+    "path": "model/cnocr/2.2/ppocr/en_PP-OCRv3_rec_infer.onnx",
     "hash": "003da6ca16cae88c5270882fc5e7417b"
   },
   {
-    "path": "model/cnstd/2.2/ppocr/en_number_mobile_v2.0_rec_infer.onnx",
+    "path": "model/cnocr/2.2/ppocr/en_number_mobile_v2.0_rec_infer.onnx",
     "hash": "442ea7b4dabdbaec95af17a6d17c3503"
   },
   {
-    "path": "model/cnstd/2.2/densenet_lite_134-fc/cnocr-v2.2-densenet_lite_134-fc-epoch=034-complete_match_epoch=0.8376-model.onnx",
+    "path": "model/cnocr/2.2/densenet_lite_134-fc/cnocr-v2.2-densenet_lite_134-fc-epoch=034-complete_match_epoch=0.8376-model.onnx",
     "hash": "332265c72378b39e83ced6b4e42954c4"
   },
   {
-    "path": "model/cnstd/2.2/densenet_lite_114-fc/cnocr-v2.2-densenet_lite_114-fc-epoch=037-complete_match_epoch=0.7859-model.onnx",
-    "hash": "d661b811419ff7dde7eb8543690cdd2b"
+    "path": "model/cnocr/2.2/densenet_lite_114-fc/cnocr-v2.2-densenet_lite_114-fc-epoch=037-complete_match_epoch=0.7859-model.onnx",
+    "hash": "4013127a18efef0cc8d2cd8c5e79c7c4"
+  },
+  {
+    "path": "model/cnstd/1.2/ppocr/ch_PP-OCRv3_det_infer.onnx",
+    "hash": "5732f8c84bd4cc0dab35094e7260f080"
+  },
+  {
+    "path": "model/cnstd/1.2/ppocr/en_PP-OCRv3_det_infer.onnx",
+    "hash": "72708a3ac241e25fefbc606832dc7529"
   },
   {
     "path": "utils/requests.py",
@@ -65,7 +57,7 @@
   },
   {
     "path": "utils/cv_tools.py",
-    "hash": "1a21f925133502d281e24adfb1310cc7"
+    "hash": "bd7094ec338416b61fbd5a238349c21e"
   },
   {
     "path": "utils/get_angle.py",
@@ -101,11 +93,11 @@
   },
   {
     "path": "utils/calculated.py",
-    "hash": "dbff14bee88a6b5e6c04d7967cf0acc8"
+    "hash": "aedc110ebd8565a2c43b1d3e21f95660"
   },
   {
     "path": "utils/update_file.py",
-    "hash": "a81d8336f7aad613d7223e1a6eb9b458"
+    "hash": "1751ba98ba6a823801b8c107f7ccabf7"
   },
   {
     "path": "utils/exceptions.py",
