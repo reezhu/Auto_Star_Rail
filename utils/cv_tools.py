@@ -27,6 +27,40 @@ def show_imgs(imgs, title='Image'):
     cv.destroyAllWindows()  
 
 class CV_Tools:
+    
+    def __init__(self, title=_("崩坏：星穹铁道")):
+        self.window = gw.getWindowsWithTitle(title)
+        if not self.window:
+            raise Exception(_("你游戏没开，我真服了"))
+        self.window = self.window[0]
+        self.hwnd = self.window._hWnd
+
+    def take_screenshot(self,points=(0,0,0,0)):
+        """
+        说明:
+            返回RGB图像
+        参数:
+            :param points: 图像截取范围
+        """
+        borderless = sra_config_obj.borderless
+        left_border = sra_config_obj.left_border
+        up_border = sra_config_obj.up_border
+        #points = (points[0]*1.5/scaling,points[1]*1.5/scaling,points[2]*1.5/scaling,points[3]*1.5/scaling)
+        if borderless:
+            left, top, right, bottom = self.window.left, self.window.top, self.window.right, self.window.bottom
+        else:
+            left, top, right, bottom = self.window.left+left_border, self.window.top+up_border, self.window.right-left_border, self.window.bottom-left_border
+        # log.info(f"{left}, {top}, {right}, {bottom}")
+        game_img = ImageGrab.grab((left, top, right, bottom), all_screens=True)
+        # game_img.save(f"logs/image/image_grab_{int(time.time())}.png", "PNG")
+        game_width, game_length = game_img.size
+        if points != (0,0,0,0):
+            #points = (points[0], points[1]+5, points[2], points[3]+5)
+            game_img = game_img.crop((game_width/100*points[0], game_length/100*points[1], game_width/100*points[2], game_length/100*points[3]))
+        screenshot = np.array(game_img)
+        screenshot = cv.cvtColor(screenshot, cv.COLOR_BGR2RGB)
+        return (screenshot, left, top, right, bottom, game_width, game_length)
+    
     def match_scaled(self, img, template, scale, mask=False):
         # 返回最大相似度，中心点x、y
         t0 = time.time()
