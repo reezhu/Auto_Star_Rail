@@ -92,3 +92,4 @@ This software is open source, free of charge and for learning and exchange purpo
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Night-stars-1/Auto_Star_Rail&type=Date)](https://star-history.com/#Night-stars-1/Auto_Star_Rail&Date)
+
