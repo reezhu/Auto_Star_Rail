@@ -57,7 +57,7 @@
   },
   {
     "path": "utils/cv_tools.py",
-    "hash": "bd7094ec338416b61fbd5a238349c21e"
+    "hash": "4c98bf761e42f44347ff2a3ee9153b9c"
   },
   {
     "path": "utils/get_angle.py",
@@ -93,7 +93,7 @@
   },
   {
     "path": "utils/calculated.py",
-    "hash": "aedc110ebd8565a2c43b1d3e21f95660"
+    "hash": "f7ada17f7d922a5096ca7de448b617e8"
   },
   {
     "path": "utils/update_file.py",
