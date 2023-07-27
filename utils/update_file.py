@@ -137,10 +137,10 @@ class update_file:
         git_proxy = sra_config_obj.github_proxy
         islatest, version, local_version = await self.is_sra_latest(type, version)
         if not islatest:
-            dl_url = f"{git_proxy}https://github.com/{self.github_source}/StarRailAssistant/archive/refs/tags/{version}.zip"
+            dl_url = f"{git_proxy}https://github.com/{self.github_source}/Auto_Star_Rail/archive/refs/tags/{version}.zip"
             tmp_zip = Path() / tmp_dir / f"{type}.zip"
-            zip_path = f"StarRailAssistant-{version.replace('v','')}/"
-            await self.copy_files(Path(), Path() / "StarRailAssistant_backup", ["utils", "picture", "map", "config.json", "get_width.py", "Honkai_Star_Rail.py", "gui.py"])
+            zip_path = f"Auto_Star_Rail-{version.replace('v','')}/"
+            await self.copy_files(Path(), Path() / "Auto_Star_Rail_backup", ["utils", "picture", "map", "config.json", "get_width.py", "Honkai_Star_Rail.py", "gui.py"])
             log.info(_("[资源文件更新]本地版本与远程版本不符，开始更新资源文件->{url_zip}").format(url_zip=dl_url))
             for __ in range(3):
                 try:
@@ -158,7 +158,7 @@ class update_file:
                 log.info(_("[资源文件更新]重试次数已达上限，更换代理可能可以解决该问题"))
                 raise Exception(_("[资源文件更新]重试次数已达上限，更换代理可能可以解决该问题"))
 
-            #shutil.rmtree("..\StarRailAssistant-beta-2.7")
+            #shutil.rmtree("..\Auto_Star_Rail-beta-2.7")
             if delete_file:
                 await self.remove_file(unzip_path, keep_folder, keep_file)
             await self.move_file(os.path.join(tmp_dir, zip_path), unzip_path, [], keep_file)
@@ -177,7 +177,8 @@ class update_file:
         local_version = sra_config_obj.star_version
         for index, __ in enumerate(range(3)):
             try:
-                up_url = f"https://api.github.com/repos/{self.github_source}/StarRailAssistant/releases/latest"
+                api_proxy = sra_config_obj.api_proxy
+                up_url = f"{api_proxy}https://api.github.com/repos/{self.github_source}/Auto_Star_Rail/releases/latest" if "http" in api_proxy else f"https://api.github.com/repos/{self.github_source}/Auto_Star_Rail/releases/latest"
                 up_reponse = await get(up_url, timeout=2)
                 up_data = up_reponse.json()
                 version: str = up_data.get("tag_name")
@@ -210,7 +211,7 @@ class update_file:
             :param version: 版本验证地址/仓库分支名称 map
         """
         raw_proxy = sra_config_obj.rawgithub_proxy
-        url_version = f"{raw_proxy}https://raw.githubusercontent.com/{self.github_source}/StarRailAssistant/{version}/version.json" if "http" in raw_proxy or raw_proxy == "" else f"https://raw.githubusercontent.com/{self.github_source}/StarRailAssistant/{version}/version.json".replace("raw.githubusercontent.com", raw_proxy)
+        url_version = f"{raw_proxy}https://raw.githubusercontent.com/{self.github_source}/Auto_Star_Rail/{version}/version.json" if "http" in raw_proxy or raw_proxy == "" else f"https://raw.githubusercontent.com/{self.github_source}/Auto_Star_Rail/{version}/version.json".replace("raw.githubusercontent.com", raw_proxy)
         log.info(_("[资源文件更新]正在检查远程版本是否有更新...")) if is_log else None
         local_version = sra_config_obj.get_config(f"{type}_version") # read_json_file(CONFIG_FILE_NAME).get(f"{type}_version", "0")
         if type == "star":
@@ -274,7 +275,7 @@ class update_file:
         url_proxy = sra_config_obj.github_proxy
         raw_proxy = sra_config_obj.rawgithub_proxy
         url_zip = url_proxy+url_zip if "http" in url_proxy or url_proxy == "" else url_zip.replace("github.com", url_proxy)
-        url_list = f"{raw_proxy}https://raw.githubusercontent.com/{self.github_source}/StarRailAssistant/{version}/{type}_list.json" if "http" in raw_proxy or raw_proxy == "" else f"https://raw.githubusercontent.com/{self.github_source}/StarRailAssistant/{version}/{type}_list.json".replace("raw.githubusercontent.com", raw_proxy)
+        url_list = f"{raw_proxy}https://raw.githubusercontent.com/{self.github_source}/Auto_Star_Rail/{version}/{type}_list.json" if "http" in raw_proxy or raw_proxy == "" else f"https://raw.githubusercontent.com/{self.github_source}/Auto_Star_Rail/{version}/{type}_list.json".replace("raw.githubusercontent.com", raw_proxy)
         
         #tmp_zip = os.path.join(tmp_dir, f"{type}.zip")
         tmp_zip = Path() / tmp_dir / f"{type}.zip"
@@ -288,7 +289,7 @@ class update_file:
 
         is_latest, remote_version, local_version = await self.is_latest(type, version)
         if not is_latest:
-                #await self.copy_files(Path(), Path() / "StarRailAssistant_backup", ["utils", "picture", "map", "config.json", "get_width.py", "Honkai_Star_Rail.py", "gui.py"])
+                #await self.copy_files(Path(), Path() / "Auto_Star_Rail_backup", ["utils", "picture", "map", "config.json", "get_width.py", "Honkai_Star_Rail.py", "gui.py"])
             log.info(_("[资源文件更新]本地版本与远程版本不符，开始更新资源文件->{url_zip}").format(url_zip=url_zip))
             for __ in range(3):
                 try:
@@ -307,7 +308,7 @@ class update_file:
                 raise Exception(_("[资源文件更新]重试次数已达上限，更换代理可能可以解决该问题"))
 
 
-            #shutil.rmtree("..\StarRailAssistant-beta-2.7")
+            #shutil.rmtree("..\Auto_Star_Rail-beta-2.7")
             if delete_file:
                 await self.remove_file(unzip_path, keep_folder, keep_file)
             await self.move_file(os.path.join(tmp_dir, zip_path), unzip_path, [], keep_file)

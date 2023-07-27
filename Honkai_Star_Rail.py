@@ -51,7 +51,7 @@ class SRA:
                 'skip_verify': False,
                 'type': "star",
                 'version': "main",
-                'url_zip': f"https://github.com/{sra_config_obj.github_source}/StarRailAssistant/archive/refs/heads/main.zip",
+                'url_zip': f"https://github.com/{sra_config_obj.github_source}/Auto_Star_Rail/archive/refs/heads/main.zip",
                 'unzip_path': ".",
                 'keep_folder': ['.git', 'logs', 'picture', 'map', 'tmp', 'venv'],
                 'keep_file': ['config.json', 'version.json', 'star_list.json', 'README_CHT.md', 'README.md'],
@@ -63,7 +63,7 @@ class SRA:
                 'skip_verify': False,
                 'type': "map",
                 'version': "map",
-                'url_zip': f"https://raw.githubusercontent.com/{sra_config_obj.github_source}/StarRailAssistant/map/map.zip",
+                'url_zip': f"https://raw.githubusercontent.com/{sra_config_obj.github_source}/Auto_Star_Rail/main/map.zip",
                 'unzip_path': "map",
                 'keep_folder': [],
                 'keep_file': [],
@@ -75,7 +75,7 @@ class SRA:
                 'skip_verify': False,
                 'type': "picture",
                 'version': "map",
-                'url_zip': f"https://raw.githubusercontent.com/{sra_config_obj.github_source}/StarRailAssistant/map/picture.zip",
+                'url_zip': f"https://raw.githubusercontent.com/{sra_config_obj.github_source}/Auto_Star_Rail/main/picture.zip",
                 'unzip_path': "picture",
                 'keep_folder': [],
                 'keep_file': [],
@@ -223,6 +223,26 @@ class SRA:
             url_ms = [i.replace(" "," "*(len(max(url_ms, key=len))-len(i))) if len(i) < len(max(url_ms, key=len)) else i for i in url_ms]
             option = options[url_ms.index(questionary.select(title, url_ms).ask())]
             sra_config_obj.rawgithub_proxy = option
+            title = _("请选择API代理地址：（不使用代理选空白选项）")
+            options = ['https://github.srap.link/', '']
+            url_ms = []
+            pbar = tqdm.tqdm(total=len(options), desc=_('测速中'), unit_scale=True, unit_divisor=1024, colour="green")
+            for index,url in enumerate(options):
+                if url == "":
+                    url = "https://api.github.com"
+                elif "https://" not in url:
+                    url =  f"https://"+url
+                try:
+                    response = asyncio.run(get(url))
+                    ms = response.elapsed.total_seconds()
+                except:
+                    ms = 999
+                finally:
+                    pbar.update(1)
+                url_ms.append(options[index]+f" {ms}ms")
+            url_ms = [i.replace(" "," "*(len(max(url_ms, key=len))-len(i))) if len(i) < len(max(url_ms, key=len)) else i for i in url_ms]
+            option = options[url_ms.index(questionary.select(title, url_ms).ask())]
+            sra_config_obj.rawgithub_proxy = option
             title = _("请选择你的仓库来源：")
             options = ["Starry-Wind", "Night-stars-1"]
             option = questionary.select(title, options).ask()
@@ -306,7 +326,7 @@ if __name__ == "__main__":
     sra = SRA()
     try:
         sra.set_config()    # 无config直接更新时初始化config文件
-        print(_("\033[0;31;40m星穹铁道小助手为开源项目，完全免费\n如果你是购买的那么你被骗了\n开源仓库地址: https://github.com/Starry-Wind/StarRailAssistant\033[0m"))
+        print(_("\033[0;31;40m星穹铁道小助手为开源项目，完全免费\n如果你是购买的那么你被骗了\n开源仓库地址: https://github.com/Night-stars-1/Auto_Star_Rail\033[0m"))
         sra.load_plugin()
         sra.run_plugins()
         if not pyuac.isUserAdmin():

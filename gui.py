@@ -2,7 +2,7 @@
 Author: Night-stars-1 nujj1042633805@gmail.com
 Date: 2023-05-29 16:54:51
 LastEditors: Night-stars-1 nujj1042633805@gmail.com
-LastEditTime: 2023-07-21 01:19:21
+LastEditTime: 2023-07-27 18:09:45
 Description: 
 
 Copyright (c) 2023 by Night-stars-1, All Rights Reserved. 
@@ -201,11 +201,11 @@ def page_main(page: ft.Page):
                 'skip_verify': False,
                 'type': "star",
                 'version': "main",
-                'url_zip': "https://github.com/Starry-Wind/StarRailAssistant/archive/refs/heads/main.zip",
+                'url_zip': "https://github.com/Starry-Wind/Auto_Star_Rail/archive/refs/heads/main.zip",
                 'unzip_path': ".",
                 'keep_folder': ['.git', 'logs', 'picture', 'map', 'tmp', 'venv'],
                 'keep_file': ['config.json', 'version.json', 'star_list.json', 'README_CHT.md', 'README.md'],
-                'zip_path': "StarRailAssistant-main/",
+                'zip_path': "Auto_Star_Rail-main/",
                 'name': _("脚本"),
                 'delete_file': False
             },
@@ -215,7 +215,7 @@ def page_main(page: ft.Page):
                 'skip_verify': False,
                 'type': "map",
                 'version': "map",
-                'url_zip': "https://raw.githubusercontent.com/Starry-Wind/StarRailAssistant/map/map.zip",
+                'url_zip': "https://raw.githubusercontent.com/Starry-Wind/Auto_Star_Rail/map/map.zip",
                 'unzip_path': "map",
                 'keep_folder': [],
                 'keep_file': [],
@@ -229,7 +229,7 @@ def page_main(page: ft.Page):
                 'skip_verify': False,
                 'type': "picture",
                 'version': "map",
-                'url_zip': "https://raw.githubusercontent.com/Starry-Wind/StarRailAssistant/map/picture.zip",
+                'url_zip': "https://raw.githubusercontent.com/Starry-Wind/Auto_Star_Rail/map/picture.zip",
                 'unzip_path': "picture",
                 'keep_folder': [],
                 'keep_file': [],
@@ -390,9 +390,9 @@ def page_main(page: ft.Page):
                 spans=[
                     ft.TextSpan(get_mess(2)),
                     ft.TextSpan(
-                        "https://github.com/Starry-Wind/StarRailAssistant",
+                        "https://github.com/Starry-Wind/Auto_Star_Rail",
                         ft.TextStyle(decoration=ft.TextDecoration.UNDERLINE,color = ft.colors.BLUE),
-                        url="https://github.com/Starry-Wind/StarRailAssistant",
+                        url="https://github.com/Starry-Wind/Auto_Star_Rail",
                     ),
                 ],
             ),
