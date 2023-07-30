@@ -5,7 +5,7 @@
   },
   {
     "path": "Honkai_Star_Rail.py",
-    "hash": "2e4cb47301adc89c5a6410737bbdbe4c"
+    "hash": "3152447afbce3d0419b58d69b3c563b8"
   },
   {
     "path": "map_res_list.py",
@@ -13,7 +13,7 @@
   },
   {
     "path": "gui.py",
-    "hash": "e9ff49958bca0a622572e1c6286db267"
+    "hash": "3097091aefa2fdcd22040afdbc04d04c"
   },
   {
     "path": "get_width.py",
@@ -24,8 +24,8 @@
     "hash": "b4515a6107f4de40b32f1e867fee14df"
   },
   {
-    "path": "model/label_cn.txt",
-    "hash": "e3f7c9400f4379e05cadbbc8a43dda45"
+    "path": "model/cnocr/label_cn.txt",
+    "hash": "b59a9d8cb2737ecfeb1f7376c7046566"
   },
   {
     "path": "model/cnocr/2.2/ppocr/en_PP-OCRv3_rec_infer.onnx",
@@ -41,7 +41,7 @@
   },
   {
     "path": "model/cnocr/2.2/densenet_lite_114-fc/cnocr-v2.2-densenet_lite_114-fc-epoch=037-complete_match_epoch=0.7859-model.onnx",
-    "hash": "4013127a18efef0cc8d2cd8c5e79c7c4"
+    "hash": "2f97dc98d468d775b8a3ba259c79d6dd"
   },
   {
     "path": "model/cnstd/1.2/ppocr/ch_PP-OCRv3_det_infer.onnx",
@@ -57,7 +57,7 @@
   },
   {
     "path": "utils/cv_tools.py",
-    "hash": "4c98bf761e42f44347ff2a3ee9153b9c"
+    "hash": "6529b623d0df7ce6109ac12eb61de50b"
   },
   {
     "path": "utils/get_angle.py",
@@ -81,7 +81,7 @@
   },
   {
     "path": "utils/config.py",
-    "hash": "14220162aafc54ef96bab11f3210c3ee"
+    "hash": "9718e4ec6bd3c2cc4f67cadc27a58f89"
   },
   {
     "path": "utils/adb.py",
@@ -89,11 +89,11 @@
   },
   {
     "path": "utils/map.py",
-    "hash": "73835fd33d9a2b1c9bb4c9eebcdd0565"
+    "hash": "ad7447286ca04d45fe0b99c255ecf7c1"
   },
   {
     "path": "utils/calculated.py",
-    "hash": "f7ada17f7d922a5096ca7de448b617e8"
+    "hash": "4d16bd886ba4ad599e37986afa5575f6"
   },
   {
     "path": "utils/update_file.py",
