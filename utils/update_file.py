@@ -177,7 +177,7 @@ class update_file:
         local_version = sra_config_obj.star_version
         for index, __ in enumerate(range(3)):
             try:
-                api_proxy = sra_config_obj.api_proxy
+                api_proxy = sra_config_obj.apigithub_proxy
                 up_url = f"{api_proxy}https://api.github.com/repos/{self.github_source}/Auto_Star_Rail/releases/latest" if "http" in api_proxy else f"https://api.github.com/repos/{self.github_source}/Auto_Star_Rail/releases/latest"
                 up_reponse = await get(up_url, timeout=2)
                 up_data = up_reponse.json()
@@ -211,13 +211,13 @@ class update_file:
             :param version: 版本验证地址/仓库分支名称 map
         """
         raw_proxy = sra_config_obj.rawgithub_proxy
-        url_version = f"{raw_proxy}https://raw.githubusercontent.com/{self.github_source}/Auto_Star_Rail/{version}/version.json" if "http" in raw_proxy or raw_proxy == "" else f"https://raw.githubusercontent.com/{self.github_source}/Auto_Star_Rail/{version}/version.json".replace("raw.githubusercontent.com", raw_proxy)
         log.info(_("[资源文件更新]正在检查远程版本是否有更新...")) if is_log else None
         local_version = sra_config_obj.get_config(f"{type}_version") # read_json_file(CONFIG_FILE_NAME).get(f"{type}_version", "0")
         if type == "star":
             return await self.is_sra_latest(type, version, is_log)
         for index, __ in enumerate(range(3)):
             try:
+                url_version = f"{raw_proxy}https://raw.githubusercontent.com/{self.github_source}/Auto_Star_Rail_MAP/main/version.json" if "http" in raw_proxy or raw_proxy == "" else f"https://raw.githubusercontent.com/{self.github_source}/Auto_Star_Rail/{version}/version.json".replace("raw.githubusercontent.com", raw_proxy)
                 remote_version = await get(url_version, timeout=2)
                 remote_version = remote_version.json()["version"]
                 break

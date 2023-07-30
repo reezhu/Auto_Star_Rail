@@ -242,7 +242,7 @@ class SRA:
                 url_ms.append(options[index]+f" {ms}ms")
             url_ms = [i.replace(" "," "*(len(max(url_ms, key=len))-len(i))) if len(i) < len(max(url_ms, key=len)) else i for i in url_ms]
             option = options[url_ms.index(questionary.select(title, url_ms).ask())]
-            sra_config_obj.rawgithub_proxy = option
+            sra_config_obj.apigithub_proxy = option
             title = _("请选择你的仓库来源：")
             options = ["Night-stars-1"]
             option = questionary.select(title, options).ask()
