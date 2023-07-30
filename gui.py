@@ -194,50 +194,7 @@ def page_main(page: ft.Page):
         rawghproxy = sra_config_obj.rawgithub_proxy
         # asyncio.run(check_file(ghproxy, "map"))
         # asyncio.run(check_file(ghproxy, "picture"))
-        data = {
-            _("脚本"):{
-                'url_proxy': ghproxy,
-                'raw_proxy': rawghproxy,
-                'skip_verify': False,
-                'type': "star",
-                'version': "main",
-                'url_zip': "https://github.com/Night-stars-1/Auto_Star_Rail/archive/refs/heads/main.zip",
-                'unzip_path': ".",
-                'keep_folder': ['.git', 'logs', 'picture', 'map', 'tmp', 'venv'],
-                'keep_file': ['config.json', 'version.json', 'star_list.json', 'README_CHT.md', 'README.md'],
-                'zip_path': "Auto_Star_Rail-main/",
-                'name': _("脚本"),
-                'delete_file': False
-            },
-            _("地图"):{
-                'url_proxy': ghproxy,
-                'raw_proxy': rawghproxy,
-                'skip_verify': False,
-                'type': "map",
-                'version': "map",
-                'url_zip': "https://raw.githubusercontent.com/Starry-Wind/Auto_Star_Rail/map/map.zip",
-                'unzip_path': "map",
-                'keep_folder': [],
-                'keep_file': [],
-                'zip_path': "map/",
-                'name': _("地图"),
-                'delete_file': True
-            },
-            _("图片"):{
-                'url_proxy': ghproxy,
-                'raw_proxy': rawghproxy,
-                'skip_verify': False,
-                'type': "picture",
-                'version': "map",
-                'url_zip': "https://raw.githubusercontent.com/Starry-Wind/Auto_Star_Rail/map/picture.zip",
-                'unzip_path': "picture",
-                'keep_folder': [],
-                'keep_file': [],
-                'zip_path': "map/",
-                'name': _("图片"),
-                'delete_file': True
-            },
-        }
+        data = sra.updata_dict
         if not check_console:
             del data[_("脚本")]
         def add_updata_log(message):
