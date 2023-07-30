@@ -150,7 +150,7 @@ def page_main(page: ft.Page):
         page.vertical_alignment = "START"
         page.horizontal_alignment = "START"
         add(log_text)
-        calculated(_("崩坏：星穹铁道")).switch_window()
+        calculated(_("崩坏：星穹铁道"), start=False).switch_window()
         time.sleep(0.5)
         get_width(_("崩坏：星穹铁道"))
         import pyautogui # 缩放纠正
