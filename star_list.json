@@ -5,7 +5,7 @@
   },
   {
     "path": "Honkai_Star_Rail.py",
-    "hash": "4c68975fa217c947513fc3c70208bc40"
+    "hash": "8318bfe60d5b766d6f0b0fdaffd1825d"
   },
   {
     "path": "map_res_list.py",
@@ -13,7 +13,7 @@
   },
   {
     "path": "gui.py",
-    "hash": "cc77e3d06f39dcdae3cb9e3ae5083f29"
+    "hash": "f3e6d2b84e6880d54d87237b8b026cd8"
   },
   {
     "path": "get_width.py",
@@ -97,7 +97,7 @@
   },
   {
     "path": "utils/update_file.py",
-    "hash": "408589d2aea2ff9309e378dfa267abfb"
+    "hash": "4f965fe20541476f30a81e7846453f7c"
   },
   {
     "path": "utils/exceptions.py",
