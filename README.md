@@ -81,6 +81,7 @@ This software is open source, free of charge and for learning and exchange purpo
 - [ ] 模拟宇宙正在开发
 - [x] GUI开发
 - [ ] 后续将会新增找宝箱、锄大地顺带捡垃圾等功能
+[项目进度请点击查看](https://github.com/users/Night-stars-1/projects/2)
 
 ## 贡献
 
