@@ -1,3 +1,12 @@
+<!--
+ * @Author: Night-stars-1 nujj1042633805@gmail.com
+ * @Date: 2023-06-15 19:31:43
+ * @LastEditors: Night-stars-1 nujj1042633805@gmail.com
+ * @LastEditTime: 2023-07-30 18:25:20
+ * @Description: 
+ * 
+ * Copyright (c) 2023 by Night-stars-1, All Rights Reserved. 
+-->
 <div align="center">
 
 [嗨！点点我！点点我！点点我！](#使用说明)
@@ -8,6 +17,8 @@
 
 Auto_Star_Rail
 
+⚠️本项目不会在`咸鱼`、`淘宝`、`拼多多`等平台售卖，发现售卖请帮忙举报。⚠️
+
 ⚠️本项目不允许以任何方式在`咸鱼`、`淘宝`、`拼多多`等平台是售卖⚠️
 </h1>
 
@@ -17,6 +28,10 @@ Auto_Star_Rail
 [![GitHub Contributors](https://img.shields.io/github/contributors/Night-stars-1/Auto_Star_Rail?style=flat-square)](https://github.com/Night-stars-1/Auto_Star_Rail/graphs/contributors)
 [![GitHub License](https://img.shields.io/github/license/Night-stars-1/Auto_Star_Rail?style=flat-square)](https://github.com/Night-stars-1/Auto_Star_Rail/blob/main/LICENSE)
 </div>
+
+## 界面展示
+<img src="https://github.com/Night-stars-1/Auto_Star_Rail_MAP/blob/main/picture/home.png" />
+<img src="https://github.com/Night-stars-1/Auto_Star_Rail_MAP/blob/main/picture/home2.png" />
 
 ## 免责声明
 
