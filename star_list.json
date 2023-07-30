@@ -5,7 +5,7 @@
   },
   {
     "path": "Honkai_Star_Rail.py",
-    "hash": "3152447afbce3d0419b58d69b3c563b8"
+    "hash": "4c68975fa217c947513fc3c70208bc40"
   },
   {
     "path": "map_res_list.py",
@@ -13,7 +13,7 @@
   },
   {
     "path": "gui.py",
-    "hash": "3097091aefa2fdcd22040afdbc04d04c"
+    "hash": "cc77e3d06f39dcdae3cb9e3ae5083f29"
   },
   {
     "path": "get_width.py",
@@ -21,7 +21,7 @@
   },
   {
     "path": "README.md",
-    "hash": "b4515a6107f4de40b32f1e867fee14df"
+    "hash": "182ac221932ac7a2355afc69ec4e6447"
   },
   {
     "path": "model/cnocr/label_cn.txt",
@@ -81,7 +81,7 @@
   },
   {
     "path": "utils/config.py",
-    "hash": "9718e4ec6bd3c2cc4f67cadc27a58f89"
+    "hash": "986b64807c52d543f0eb443c7be2c577"
   },
   {
     "path": "utils/adb.py",
@@ -97,7 +97,7 @@
   },
   {
     "path": "utils/update_file.py",
-    "hash": "1751ba98ba6a823801b8c107f7ccabf7"
+    "hash": "408589d2aea2ff9309e378dfa267abfb"
   },
   {
     "path": "utils/exceptions.py",
