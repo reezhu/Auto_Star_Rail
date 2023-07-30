@@ -383,9 +383,9 @@ class calculated(CV_Tools):
                 if ((time.time() - start_time > 15  and "point" not in temp_name) \
                     or (time.time() - start_time > 30  and "point" in temp_name)): #防止卡死.重启线程
                     log.info(_("传送识别超时"))
-                    self.keyboard.press(Key.esc)
-                    time.sleep(0.1)
-                    self.keyboard.release(Key.esc)
+                    #self.keyboard.press(Key.esc)
+                    #time.sleep(0.1)
+                    #self.keyboard.release(Key.esc)
                     break
                 if flag == False:
                     break
