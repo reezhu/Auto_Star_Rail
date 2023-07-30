@@ -275,8 +275,10 @@ class update_file:
         url_proxy = sra_config_obj.github_proxy
         raw_proxy = sra_config_obj.rawgithub_proxy
         url_zip = url_proxy+url_zip if "http" in url_proxy or url_proxy == "" else url_zip.replace("github.com", url_proxy)
-        url_list = f"{raw_proxy}https://raw.githubusercontent.com/{self.github_source}/Auto_Star_Rail/{version}/{type}_list.json" if "http" in raw_proxy or raw_proxy == "" else f"https://raw.githubusercontent.com/{self.github_source}/Auto_Star_Rail/{version}/{type}_list.json".replace("raw.githubusercontent.com", raw_proxy)
-        
+        if type == "star":
+            url_list = f"{raw_proxy}https://raw.githubusercontent.com/{self.github_source}/Auto_Star_Rail/main/{type}_list.json" if "http" in raw_proxy or raw_proxy == "" else f"https://raw.githubusercontent.com/{self.github_source}/Auto_Star_Rail/main/{type}_list.json".replace("raw.githubusercontent.com", raw_proxy)
+        else:
+            url_list = f"{raw_proxy}https://raw.githubusercontent.com/{self.github_source}/Auto_Star_Rail_MAP/main/{type}_list.json" if "http" in raw_proxy or raw_proxy == "" else f"https://raw.githubusercontent.com/{self.github_source}/Auto_Star_Rail_MAP/main/{type}_list.json".replace("raw.githubusercontent.com", raw_proxy)
         #tmp_zip = os.path.join(tmp_dir, f"{type}.zip")
         tmp_zip = Path() / tmp_dir / f"{type}.zip"
         if not os.path.exists(tmp_dir):
