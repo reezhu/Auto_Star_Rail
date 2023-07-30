@@ -2,7 +2,7 @@
 Author: Night-stars-1
 Date: 2023-05-17 21:45:43
 LastEditors: Night-stars-1 nujj1042633805@gmail.com
-LastEditTime: 2023-07-27 17:59:22
+LastEditTime: 2023-07-30 16:02:47
 Description: 一些cv工具
 
 Copyright (c) 2023 by Night-stars-1, All Rights Reserved. 
@@ -10,15 +10,19 @@ Copyright (c) 2023 by Night-stars-1, All Rights Reserved.
 import time
 import cv2 as cv
 import numpy as np
+import pygetwindow as gw
+
+from PIL import ImageGrab, Image
 
 from .log import log
+from .config import sra_config_obj, _
 
 def show_img(img, scale=1, title='Image'):
     # cv.namedWindow('image', cv.WINDOW_NORMAL)
     h, w = img.shape[:2]
     img = cv.resize( img ,(int(w*scale), int(h*scale))  )
     cv.imshow(title, img)
-    cv.waitKey(1000)  # 显示图像并等待1秒
+    cv.waitKey(0)  # 显示图像并等待1秒
     cv.destroyAllWindows()  
 
 def show_imgs(imgs, title='Image'):
@@ -27,7 +31,7 @@ def show_imgs(imgs, title='Image'):
     cv.destroyAllWindows()  
 
 class CV_Tools:
-    
+
     def __init__(self, title=_("崩坏：星穹铁道")):
         self.window = gw.getWindowsWithTitle(title)
         if not self.window:

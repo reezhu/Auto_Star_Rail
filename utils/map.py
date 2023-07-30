@@ -41,8 +41,7 @@ class Map:
                 return False
         with keyboard.Listener(on_press=on_press) as listener:  # 创建按键监听线程
             listener.join()  # 等待按键监听线程结束
-
-            
+     
     def map_init(self):
         # 进行地图初始化，把地图缩小,需要缩小5次
         target = cv.imread(f'./picture/pc/contraction.jpg')
