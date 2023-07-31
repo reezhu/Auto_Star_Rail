@@ -25,7 +25,7 @@
   },
   {
     "path": "model/cnocr/label_cn.txt",
-    "hash": "b59a9d8cb2737ecfeb1f7376c7046566"
+    "hash": "e3f7c9400f4379e05cadbbc8a43dda45"
   },
   {
     "path": "model/cnocr/2.2/ppocr/en_PP-OCRv3_rec_infer.onnx",
@@ -38,10 +38,6 @@
   {
     "path": "model/cnocr/2.2/densenet_lite_134-fc/cnocr-v2.2-densenet_lite_134-fc-epoch=034-complete_match_epoch=0.8376-model.onnx",
     "hash": "332265c72378b39e83ced6b4e42954c4"
-  },
-  {
-    "path": "model/cnocr/2.2/densenet_lite_114-fc/cnocr-v2.2-densenet_lite_114-fc-epoch=037-complete_match_epoch=0.7859-model.onnx",
-    "hash": "2f97dc98d468d775b8a3ba259c79d6dd"
   },
   {
     "path": "model/cnstd/1.2/ppocr/ch_PP-OCRv3_det_infer.onnx",
