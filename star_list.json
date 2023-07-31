@@ -40,6 +40,10 @@
     "hash": "332265c72378b39e83ced6b4e42954c4"
   },
   {
+    "path": "model/cnocr/2.2/densenet_lite_114-fc/cnocr-v2.2-densenet_lite_114-fc-epoch=037-val-complete_match-epoch=0.9667-model.onnx",
+    "hash": "079f9e53539b1e636df518dfc8343f38"
+  },
+  {
     "path": "model/cnstd/1.2/ppocr/ch_PP-OCRv3_det_infer.onnx",
     "hash": "5732f8c84bd4cc0dab35094e7260f080"
   },
