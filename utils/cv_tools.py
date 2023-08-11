@@ -39,7 +39,7 @@ class CV_Tools:
         self.window = self.window[0]
         self.hwnd = self.window._hWnd
 
-    def take_screenshot(self,points=(0,0,0,0)):
+    def take_screenshot(self,points=(0,0,0,0),sleep = 3):
         """
         说明:
             返回RGB图像
@@ -55,16 +55,21 @@ class CV_Tools:
         else:
             left, top, right, bottom = self.window.left+left_border, self.window.top+up_border, self.window.right-left_border, self.window.bottom-left_border
         # log.info(f"{left}, {top}, {right}, {bottom}")
-        game_img = ImageGrab.grab((left, top, right, bottom), all_screens=True)
-        # game_img.save(f"logs/image/image_grab_{int(time.time())}.png", "PNG")
-        game_width, game_length = game_img.size
-        if points != (0,0,0,0):
-            #points = (points[0], points[1]+5, points[2], points[3]+5)
-            game_img = game_img.crop((game_width/100*points[0], game_length/100*points[1], game_width/100*points[2], game_length/100*points[3]))
-        screenshot = np.array(game_img)
-        screenshot = cv.cvtColor(screenshot, cv.COLOR_BGR2RGB)
-        return (screenshot, left, top, right, bottom, game_width, game_length)
-    
+        try:
+            game_img = ImageGrab.grab((left, top, right, bottom), all_screens=True)
+            # game_img.save(f"logs/image/image_grab_{int(time.time())}.png", "PNG")
+            game_width, game_length = game_img.size
+            if points != (0,0,0,0):
+                #points = (points[0], points[1]+5, points[2], points[3]+5)
+                game_img = game_img.crop((game_width/100*points[0], game_length/100*points[1], game_width/100*points[2], game_length/100*points[3]))
+            screenshot = np.array(game_img)
+            screenshot = cv.cvtColor(screenshot, cv.COLOR_BGR2RGB)
+            return (screenshot, left, top, right, bottom, game_width, game_length)
+        except OSError as e:
+            log.error("截图失败，是不是游戏最小化了？")
+            time.sleep(sleep)
+            return self.take_screenshot(points,sleep = min(sleep*2,600))
+
     def match_scaled(self, img, template, scale, mask=False):
         # 返回最大相似度，中心点x、y
         t0 = time.time()
