@@ -66,8 +66,13 @@ def modify_json_file(filename: str, key, value):
     # 先读，再写
     data, file_path = read_json_file(filename, path=True)
     data[key] = value
-    with open(file_path, "wb") as f:
-        f.write(orjson.dumps(data, option=orjson.OPT_PASSTHROUGH_DATETIME | orjson.OPT_SERIALIZE_NUMPY | orjson.OPT_INDENT_2))
+    try:
+        with open(file_path, "wb") as f:
+            f.write(orjson.dumps(data, option=orjson.OPT_PASSTHROUGH_DATETIME | orjson.OPT_SERIALIZE_NUMPY | orjson.OPT_INDENT_2))
+    except PermissionError as e:
+        import time
+        time.sleep(1)
+        modify_json_file(filename, key, value)
 
 
 def get_file(path, exclude=[], exclude_file=None, get_path=False, only_place=False) -> list[str]:
