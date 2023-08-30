@@ -1,15 +1,15 @@
-import os
-import sys
-from typing import Any, get_type_hints, Union
-import orjson
 import gettext
 import inspect
-
+import os
+import sys
 from pathlib import Path
+from typing import Any, Union, get_type_hints
+
+import orjson
 from orjson import JSONDecodeError
 
-from .log import log
 from .exceptions import TypeError
+from .log import log
 
 CONFIG_FILE_NAME = "config.json"
 

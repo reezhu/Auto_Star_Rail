@@ -6,16 +6,15 @@ numpy
 packaging
 protobuf
 sympy
-whl\Polygon3-3.0.9-cp311-cp311-win_amd64.whl
+whl/Polygon3-3.0.9-cp311-cp311-win_amd64.whl
 cnocr>=2.2.2.3
 docopt
 httpx
 loguru
-opencv_contrib_python
 opencv_python
 Pillow
 PyAutoGUI==0.9.53
-PyGetWindow
+pywinctl
 pynput
 pyuac
 pywin32
@@ -23,7 +22,7 @@ questionary
 tqdm
 ultralytics
 xpinyin
-whl\httpx_socks-0.7.7-py3-none-any.whl
+httpx_socks
 flet
 cryptography
 pluggy
