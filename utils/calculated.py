@@ -420,8 +420,12 @@ class calculated(CV_Tools):
 
     def check_fighting(self):
         while True:
-            end_str = str(self.part_ocr((20,95,100,100)))
-            if any(substring in end_str for substring in self.end_list):
+            if (
+                self.compare_lists([0, 0, 222], self.get_pix_rgb(pos=(1435, 58))) and
+                self.compare_lists(self.get_pix_rgb(pos=(1435, 58)), [0, 0, 240]) and
+                self.compare_lists([20, 90, 80], self.get_pix_rgb(pos=(88, 979))) and
+                self.compare_lists(self.get_pix_rgb(pos=(88, 979)), [25, 100, 90])
+            ):
                 log.info(_("未在战斗状态"))
                 break
             else:
@@ -513,8 +517,6 @@ class calculated(CV_Tools):
         start_time = time.time()  # 开始计算战斗时间
         while True:
             if type == 0:
-                log.info(self.get_pix_rgb(pos=(1435, 58)))
-                log.info(self.get_pix_rgb(pos=(88, 979)))
                 if (
                     self.compare_lists([0, 0, 222], self.get_pix_rgb(pos=(1435, 58))) and
                     self.compare_lists(self.get_pix_rgb(pos=(1435, 58)), [0, 0, 240]) and
@@ -908,9 +910,13 @@ class calculated(CV_Tools):
         time.sleep(1) # 等待进入入画
         log.info(_("等待入画结束"))
         time.sleep(0.3) # 缓冲
-        while True:
-            end_str = str(self.part_ocr((0,95,100,100)))
-            if any(substring in end_str for substring in self.end_list):
+        while True:            
+            if (
+                self.compare_lists([0, 0, 222], self.get_pix_rgb(pos=(1435, 58))) and
+                self.compare_lists(self.get_pix_rgb(pos=(1435, 58)), [0, 0, 240]) and
+                self.compare_lists([20, 90, 80], self.get_pix_rgb(pos=(88, 979))) and
+                self.compare_lists(self.get_pix_rgb(pos=(88, 979)), [25, 100, 90])
+            ):
                 log.info(_("完成入画"))
                 break
             time.sleep(1.0) # 缓冲
