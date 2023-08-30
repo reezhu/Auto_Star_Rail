@@ -27,4 +27,4 @@ httpx_socks
 flet
 cryptography
 pluggy
-httpcore==0.17.3
+httpcore
